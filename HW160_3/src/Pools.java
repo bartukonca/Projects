@@ -1,7 +1,7 @@
 /*
 Ali Bartu Konca 2021400177 01/05/2023
 The Pools class is an extension of the BorderMap class. Pool is an extension because it will access the
-same data fields as the BorderMap.Pools is used for finding the pools, their volumes and the score.
+same data fields as the BorderMap.Pools is used for finding the pools and their volumes.
 Finds the pools by using another map the moneyHeights. It starts by filling the map with money to the maximum
 height,then it iterates over the map and spills the excess money.This iteration goes on until no changes have been
 made on the map. Then we find the set the final map with the pools named.
@@ -89,25 +89,7 @@ public class Pools extends BorderMap {
                         if (changeMadeThisIteration) {
                             changeMade = true;
                             //We don't enter here if changeMadeThisIteration becomes false,so it stays true as we want it to.
-                            //Prints the map before the inputs are given.
-                            for (int k = 0; k < rows; k++) {
-                                System.out.printf("%3d", k);
-                                for (int l = 0; l < columns; l++) {
-                                    if (l != columns - 1 || k == 0)
-                                        System.out.printf("%3d", moneyHeights[k][l]);
-                                    else
-                                        System.out.printf("%3d ", moneyHeights[k][l]);
-                                }
-                                System.out.println();
-                            }
-                            System.out.print("    ");
-
-                            for (String indices : letterIndices)
-                                System.out.printf("%2s ", indices);
-                            System.out.println();
                         }
-
-
                     }
                 }
             }
@@ -218,14 +200,6 @@ public class Pools extends BorderMap {
                     //Now that we have assigned this square we change its value to 1.
                 }
             }
-        }
-    }
-
-    public static void findScore() {
-        //Finds the score. For every unconnected pool, we find their volumes, and we add their square roots.
-        for (Pools pool : allPools) {
-            score += Math.pow(pool.volume, 0.5);
-            //Score is a data field in the Map class.
         }
     }
 
