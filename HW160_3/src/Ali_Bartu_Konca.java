@@ -49,7 +49,7 @@ public class Ali_Bartu_Konca {
         System.out.println();
 
         BorderMap.findBordersAndPools();
-        //The main method which finds the pools and their heights and the score.
+        //The main method which finds the pools and their heights.
 
         for (Pools pool : Pools.getAllPools()) {
 
@@ -67,17 +67,5 @@ public class Ali_Bartu_Konca {
         }
 
 
-    }
-
-    public static int arraySearch(String[] arr, String letter) {
-        //A method to find the index of a given string in an array.
-        int index = -1;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].equals(letter)) {
-                index = i;
-                break;
-            }
-        }
-        return index;
     }
 }
