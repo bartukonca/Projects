@@ -39,13 +39,12 @@ public class BorderMap extends Map {
             }
         }
 
-        //The following methods find the pools and the score and prints the final map.
+        //The following methods find the pools and prints the final map.
 
 
         Pools.initializeMoneyHeights();
         Pools.findMoneyHeights();
         Pools.findPools();
-        Pools.findScore();
         Pools.setPoolMap();
         Pools.printPoolMap();
 
