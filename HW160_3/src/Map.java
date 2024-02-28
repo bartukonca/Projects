@@ -13,8 +13,6 @@ public class Map {
 
     protected static int columns;
 
-    protected static double score;
-
     protected static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
     //Will use ALPHABET to make indices for the columns and to name the pools.
 
@@ -33,10 +31,6 @@ public class Map {
     }
 
     //Some getter and setter methods...
-
-    public static double getScore() {
-        return score;
-    }
 
     public static void setMap(int r, int c, int v) {
         map[r][c] = v;
